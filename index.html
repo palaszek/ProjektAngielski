@@ -16,11 +16,11 @@
     </div>
     <script>
       const enwords = ["Loop", "Hardware", "Algorithm", "Database",
-       "Code", "Function", "Variable", "Encryption", "Compiler",
+       "Code", "Function", "Variable", "Hard Drive", "Compiler",
         "Protocol", "File","Patch", "Merge", "Branch"];
 
       const plwords = ["Pętla", "Sprzęt", "Algorytm", "Baza Danych",
-       "Kod", "Funkcja", "Zmienna", "Szyfrowanie", "Kompilator",
+       "Kod", "Funkcja", "Zmienna", "Dysk Twardy", "Kompilator",
         "Protokół", "PLik", "Poprawka", "Scalanie", "Gałąź"];
       
       let shuf_words = new Array();
@@ -44,9 +44,10 @@
         box.innerHTML = shuf_words[i];
 
         box.onclick = function () {
+          if(document.querySelectorAll('.boxOpen').length < 2)
           this.classList.add('boxOpen');
           setTimeout(function () {
-            if (document.querySelectorAll('.boxOpen').length > 1) {
+            if (document.querySelectorAll('.boxOpen').length == 2) {
                 var id1 = enwords.findIndex(word => word == document.querySelectorAll('.boxOpen')[0].textContent);
                 if(id1 == -1)id1 = enwords.findIndex(word => word == document.querySelectorAll('.boxOpen')[1].textContent);             
                 
