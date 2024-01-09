@@ -8,6 +8,7 @@
 
 body
 {
+    min-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +25,7 @@ body
     gap: 30px;
     background: #0d614b;
     padding: 40px 60px;
+    overflow: auto;
 }
 
 h2
@@ -60,7 +62,7 @@ h2
     flex-wrap: wrap;
     gap: 10px;
     transform-style: preserve-3d;
-    perspective: 1500px;
+    perspective: 500px;
 }
 .item
 {
